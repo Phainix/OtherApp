@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
     @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
-        Uri uri = Uri.parse("content://com.example.faitha.notekeeper.provider");
+        Uri uri = Uri.parse("content://com.example.faitha.notekeeper.provider/courses");
         String[] columns = {"_id", "course_title", "course_id"};
         return new CursorLoader(this, uri, columns, null, null, "course_title");
     }
